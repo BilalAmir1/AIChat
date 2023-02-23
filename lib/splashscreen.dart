@@ -44,8 +44,8 @@ class _splashScreenState extends State<splashScreen>
           Lottie.network(url, controller: _controller, onLoaded: (compos) {
             _controller
               ..duration = compos.duration
-              ..forward().then((value) => Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => home())));
+              ..forward().then(
+                  (value) => Navigator.pushReplacementNamed(context, 'home'));
           }),
           Center(
               child: Text("Loading...",

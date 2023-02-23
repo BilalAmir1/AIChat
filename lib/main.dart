@@ -14,7 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'CHAT AI',
-      home: splashScreen(),
+      routes: {
+        'home': (context) => home(),
+        'splashscreen': (context) => splashScreen()
+      },
+      initialRoute: 'splashscreen',
       debugShowCheckedModeBanner: false,
     );
   }
